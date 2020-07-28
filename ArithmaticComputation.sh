@@ -20,4 +20,10 @@ function secondExpression(){
 	getInputs
 	secondResult=$((($firstNumber*$secondNumber+$thirdNumber)))
 }
-secondExpression
+
+function thirdExpression(){
+	#Expression is c+a/b
+	getInputs
+	thirdResult=`expr "scale=2;$thirdNumber+$firstNumber/$secondNumber" | bc -l`
+}
+thirdExpression
