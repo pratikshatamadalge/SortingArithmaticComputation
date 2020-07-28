@@ -36,8 +36,13 @@ function fourthExpression(){
 	#Expression is a%b+c
 	fourthResult=`expr "scale=2;$firstNumber%$secondNumber+$thirdNumber" | bc -l`
 	resultStore[fourthResult]=$fourthResult
+	storeIntoArray
 }
 
+function storeIntoArray(){
+	for(( index=0; index<${#resultStore[@]}; index++ ))
+	do
+		resultStoreInArray[index]=${resultStore[$index]}
+	done
+}
 getInputs
-echo ${resultStore[@]}
-echo ${!resultStore[@]}
