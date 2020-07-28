@@ -4,6 +4,7 @@
 #Author:Pratiksha C. Tamadalge
 
 declare -A resultStore
+declare -a resultStoreInArray
 
 function getInputs(){
 	read -p "Enter first Number: " firstNumber
